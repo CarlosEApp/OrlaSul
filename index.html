@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ORLA SUL - Ofertas incriveis dos melhores produtos e das principais plataformas </title>
+<link rel="shortcut icon" href="SRC/Logo_icone.png" type="image/x-icon">
+
+<!-- SEO e compartilhamento -->
+<!-- Descrição (aparece no Google) -->
+<meta name="description" content="Orla Sul - Encontre Aqui! Ofertas incriveis dos melhores produtos e principais  plataformas de vendas sem sair de casa">
+<meta name="keywords" content="Orla Sul, produtos,comprar online, descontos, ofertas, variedades,promoções, descontos, melhores preços">
+<!-- Autor -->
+<meta name="author" content="Shopping Orla Sul">
+
+<!-- Open Graph (para redes sociais) -->
+<meta property="og:title" content="Orla Sul - Encontre Aqui! Ofertas incriveis dos melhores produtos e principais  plataformas de vendas sem sair de casa">
+<meta property="og:description" content="Descubra os melhores produtos com descontos exclusivos.">
+<meta property="og:image" content="https://orlasul.netlify.app/SRC/metaTegimg.png">
+<meta property="og:url" content="https://orlasul.netlify.app/">
+<meta property="og:type" content="website">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://kit.fontawesome.com/60de48ee9a.js" crossorigin="anonymous"></script>
+<script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-database-compat.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+<meta name="google-site-verification" content="I5QDbpWaGPHDZCWZITuNbd94oKGkibaclmduJlckKqU" />
+
+<link rel="stylesheet" href="CSS/index.css">
+
+
+  
+</head>
+<body>
+    
+      <div id="divGeral">
+
+      <a id="topo" title="Ir para topo" href="#"></a>
+       <a  id="a_pesquisaMobile" href="#mercadoLivre" title="a escolha"></a>
+         <a  id="a_pesquisa" href="#main_Um" title="a divEscolha"></a>
+          <a  id="a_footer" href="#footer" title="a footer"></a>
+           <a id="a_sobre" href="#divQuemSomos" title="a_sobre"></a>
+           
+          <header>
+            <div id="header_um">
+              <div id="logo">
+                <img src="SRC/Logo_OrlaSul.png"  alt="Logo WallCard Brasil">
+              </div>
+              <div><i id="I_Casa" class="fa-solid fa-house"> <b id="bHome"> Home</b></i> </div> <!---- <button id="admin" title="Administradores"><i id="i_admin" class="fa-solid fa-user"></i></button-->
+             <div id="divUser"> <img id="imgUser" src="SRC/Profile-PNG-Images.png" width="33px" alt=""> <label id="lblUser" for="">  </label></div>
+              <div id="divHbotões"> <p id="P_hora"></p> </div> <i id="togle" title="Tela Cheia" class="fa-solid fa-desktop"></i> <i id="menu" class="fa-solid fa-bars"></i>
+            </div>
+            <div id="divheader_dois">
+               <div id="divRedes"> <!--<p id="P_WhatsappFooter"> <i class="fa-brands fa-whatsapp"></i></p>--> <p id="P_facebook"><i class="fa-brands fa-facebook-f"></i> </p> <p id="P_InstagreanFooter"><i class="fa-brands fa-instagram"></i> </p>
+              <p id="P_EmailFooter"><i class="fa-regular fa-envelope"></i> </p> <i id="I_compartilhar" title="Compartilhar" class="fa-solid fa-share-nodes"></i>  </div>
+            </div>
+          </header>
+                
+           <div id="menu_lateral">
+        <p id="aditeUser"></p>
+       <div id="MenuIMG"> <img id="imgMenuUser" src="SRC/Profile-PNG-Images.png" alt="" width="70px"> 
+       <label for="" id="lblnomeUser"></label></div>
+         <nav>
+          <ul>
+
+            <li><a id="togle_" ><i  title="Tela Cheia" class="fa-solid fa-desktop"></i> Tela Cheia</a></li>
+            <li><a id="a_facebook" ><i class="fa-brands fa-facebook-f"></i> Facebook</a></li>
+            <li><a id="a_insta"> <i class="fa-brands fa-instagram"></i> Instagram</a></li>
+            <li><a id="emailMenu" ><i class="fa-solid fa-envelope"></i> Email</a></li>
+            <li><a  id="sobre" href="#divQuemSomos">📦 Sobre</a></li>
+            <li><a id="Admin"><i  class="fa-solid fa-user"></i> Administração</a></li>
+            <li><a id="exitMenu_" ><i class="fa-solid fa-delete-left"></i> Exit </a></li> 
+         <!-- Adicione mais itens se quiser -->
+          </ul>
+         </nav>
+      </div>
+
+          <main>
+            <div id="main_Um">
+
+              <div id="mainUm_Flex">
+
+                <div id="divLateral">
+                 <h1>Produtos</h1>
+                    <div id="divPesquisar">
+                      <input type="text" id="inputPesquisar" placeholder="Pesquisar produtos...">
+                      <button id="btnPesquisar" title="Pesquisar"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                    <br>
+                     <select name="nichos" id="nichos" title="Escolha um nicho">
+                     <option value="" disabled >Listas de nichos</option>
+                      <option value="Vestuário">Vestuário</option>
+                       <option value="Calçados">Calçados</option>
+                        <option value="Roupas Intimas">Roupas Intimas</option>
+                         <option value="Moda Praia">Moda Praia</option>
+                          <option value="Perfumaria">Perfumaria</option>
+                         <!-- <option value="Destaques">Destaques</option> -->
+                           <option value="sair_s"></option>
+                            <option value="sair_s">Exit</option>
+                   </select>
+                   <br>
+                  <div id="laterParagrafos">
+                   <p id="amazon" title="Amazon"><img title="Amazon" src="SRC/amazon.png" width="64%" alt=""></p>
+                    <p id="mercadoLivre" title="Mercado Livre"><img title="Mercado Livre" src="SRC/mecadoLivre.png" width="64%" alt=""></p>
+                   
+                  
+                  </div>
+                </div>
+                
+                <div id="divLista">
+                 
+                  <h1 id="h1Oferta"> Ofertas Especiais!</h1>
+               
+                  <div id="list"> </div>
+                  <br><br>
+                  <div id="divBtnMais"> <button id="btnMais" title="Mais Produtos">Mais Produtos</button></div>
+                </div>
+            
+              
+              </div>
+            </div>
+
+          </main>
+
+          </div>
+           <div id="divQuemSomos">
+            <div>
+             <h1>Quem Somos</h1>
+             <p>Na <b id="bf">Orla</b><b id="bff">Sul</b> , acreditamos que comprar online deve ser simples, rápido e vantajoso. Por isso, reunimos em um só espaço produtos de grandes plataformas como Amazon, Mercado Livre... oferecendo acesso direto às melhores ofertas e condições.
+                Nosso propósito é ser o elo entre você e as maiores lojas digitais, garantindo praticidade e confiança em cada clique. Aqui você encontra variedade, economia e a tranquilidade de comprar em sites reconhecidos mundialmente.
+                 A Orla Sul nasceu para facilitar sua vida: menos tempo procurando, mais tempo aproveitando suas compras.</p>
+          </div> </div>
+          <footer id="footer">
+            
+          </footer>
+
+           <script src="JS/index.js"></script>
+         
+</body>
+</html>
