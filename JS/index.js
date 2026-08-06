@@ -214,7 +214,7 @@ var pass = document.getElementById('inputAD').value;
 if(pass== resp1|| pass== resp2 || pass== resp2){
 swal('Sucesso','Você seráredirecionado(a)!\n (Tela de cadastros!)','success');
 setTimeout(function(){
-window.open('HTML/Cadastro.html','_self')
+window.open('HTML/cadastro.html','_self')
 Swal.close()
 },2000)
 }else{
