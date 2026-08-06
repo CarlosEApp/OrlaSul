@@ -384,7 +384,7 @@ var timer;
       timer = setTimeout(() => {
     
        Swal.fire({
-        title: `Não encontramos produtos relacionados a sua pesquisa`,
+        title: ``,
         text: ``,
         imageUrl: 'SRC/desculpa_.png',
         background: '#ffffff04',
@@ -401,7 +401,7 @@ var timer;
         }
         })
         cancelar() 
-      }, 1200);
+      }, 2100);
     }
 
     function cancelar() {
