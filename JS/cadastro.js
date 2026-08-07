@@ -221,7 +221,7 @@ document.getElementById('Funcao').addEventListener('change',function(){
    sessionStorage.setItem('STORnichos', '')
   document.getElementById('divCadastro').style.display='block';
   document.getElementById('divProdCadastrados').style.display='none';
-
+ geradorCodigo()
     }else if(funçao=='Cadastrados'){
  //  alert('Cadastrados')
   sessionStorage.setItem('STORempresa', '')

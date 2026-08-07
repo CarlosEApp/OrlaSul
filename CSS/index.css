@@ -677,14 +677,16 @@ padding-bottom: 30px;
 .divList{
 width: 100%;
 max-width: 280px;
-
 margin-bottom: 40px;
 font-family: 'Poppins', sans-serif;
 
 }
+.divList2{
+    text-align: center;
+}
 .imgList{
 margin: auto;
-width: 99%;
+width: 82%;
 cursor: pointer;
 transition: transform 0.3s ease;
 }
@@ -758,6 +760,16 @@ max-width: 380px;
 overflow: hidden;
 margin-bottom: 70px;
 font-family: 'Poppins', sans-serif;
+}
+#bv{
+font-size: clamp(2.300rem, 0.3vw  + 0.5rem, 2.300rem);
+color: rgb(2, 2, 2);
+font-family: 'Poppins', sans-serif;
+font-weight: bold;
+text-shadow: 0px 1px 1px rgb(0, 0, 0);
+}
+.btnList{
+    padding: 12px;
 }
 }
 #btnMais{
