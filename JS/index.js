@@ -807,3 +807,7 @@ var whatsappLink = `https://wa.me/?text=${encodeURIComponent(whatsappMessage)}`;
 // abre o WhatsApp com a mensagem
 window.open(whatsappLink, "_blank");
 })
+
+setTimeout(function(){
+   cancelar() 
+},1000)
