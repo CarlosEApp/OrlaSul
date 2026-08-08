@@ -148,6 +148,8 @@ min-height: 50vh;
 background-color: rgb(255, 255, 255);
 color: rgb(32, 32, 32);
 font-family: 'Poppins', sans-serif;
+margin-bottom: 100px;
+padding-bottom: 50px;
 }
 #divheader_dois{
 margin: auto;
@@ -679,7 +681,6 @@ width: 100%;
 max-width: 280px;
 margin-bottom: 40px;
 font-family: 'Poppins', sans-serif;
-
 }
 .divList2{
     text-align: center;
@@ -703,7 +704,6 @@ margin-top: 3px;
 font-size: clamp(1rem, 0.3vw  + 0.5rem, 1rem);
 font-family: 'Poppins', sans-serif;
 color: rgb(0, 18, 121);
-
 }
 .divList3{
 overflow: hidden;
@@ -769,7 +769,7 @@ font-weight: bold;
 text-shadow: 0px 1px 1px rgb(0, 0, 0);
 }
 .btnList{
-    padding: 12px;
+padding: 12px;
 }
 }
 #btnMais{
@@ -804,6 +804,7 @@ background-color: rgba(255, 254, 216, 0);
 margin-top: 180px;
 margin-bottom: 30px;
 padding-top: 46px;
+display: none;
 }
 #divQuemSomos p{
 font-size: clamp(1rem, 0.3vw  + 0.5rem, 1rem);
@@ -811,7 +812,6 @@ color: rgb(0, 0, 0);
 text-align: justify;
 line-height: 1.5;
 font-family: 'Poppins', sans-serif;
-
 }
 #bf{
 color: rgb(0, 89, 255);

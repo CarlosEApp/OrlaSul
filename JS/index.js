@@ -134,8 +134,9 @@ document.getElementById('lblUser').innerHTML=`Olá, ${doc.NomeAbrev}`;
 document.getElementById('lblnomeUser').innerHTML=`Olá, ${doc.NomeAbrev}`;;
 document.getElementById('imgMenuUser').src= doc.Foto;
 document.getElementById('imgUser').src= doc.Foto;
+sessionStorage.setItem('idUser', doc.Email);
 }else{
-alert(`Nome: ${doc.Usuário}`)
+//alert(`Nome: ${doc.Usuário}`)
 }
 }))
 }
@@ -144,6 +145,7 @@ iniciarUserFirebase()
 
 document.getElementById('sobre').addEventListener('click', function() { 
 document.getElementById('a_sobre').click()
+document.getElementById('divQuemSomos').style.display='block';
 })
 
 //pasword
@@ -265,6 +267,7 @@ document.getElementById('nomeUserCuston').innerHTML= `Olá, ${nome}`;
 
 // Quando clicar em "Trocar de foto"
 document.getElementById('deslogar').addEventListener('click', function(){
+  sessionStorage.setItem('idUser', '');
 deslogar()
 window.location.reload()
 });
@@ -315,6 +318,7 @@ document.getElementById('myProgresos').style.display = 'none'
 sessionStorage.setItem('SeçãoAberta','Iniciado')
 document.getElementById('topo').click();
  document.getElementById('togle').click();
+ iduser()
 swalclose()
 clearInterval(id)
 //document.getElementById('imgcad').value = `${url_imagem}`
@@ -375,6 +379,7 @@ document.getElementById('menu').click()
 //home
 document.getElementById('I_Casa').addEventListener('click', function() {
 document.getElementById('topo').click()
+document.getElementById('divQuemSomos').style.display='none';
 })
 
 
@@ -505,6 +510,16 @@ function verificarTela() {
 verificarTela();
 
 botao.addEventListener('click', function() {
+   var IDU= sessionStorage.getItem('idUser');
+   var hora= sessionStorage.getItem('hora')
+   var data= sessionStorage.getItem('data')
+  var dbfid=firebase.firestore();
+   dbfid.collection('Clicks_BTNLojas').doc(`${IDU}_${hora}`).set({
+    ID:IDU,
+    Produto:doc.Titulo,
+     Codigo:doc.ID,
+    DATA:`${data}-${hora}`,
+  })
 window.open(`${doc.Link}`, '_blank');
 })
 img.addEventListener('click', function() {
@@ -530,6 +545,19 @@ document.body.style.paddingRight = '0px';
 })
 
  document.getElementById('btnLoja').addEventListener('click', function() {
+
+   var IDU= sessionStorage.getItem('idUser');
+   var hora= sessionStorage.getItem('hora')
+   var data= sessionStorage.getItem('data')
+
+   var dbfid=firebase.firestore();
+   dbfid.collection('Clicks_BTNLojas').doc(`${IDU}_${hora}`).set({
+    ID:IDU,
+    Produto:doc.Titulo,
+     Codigo:doc.ID,
+    DATA:`${data}-${hora}`,
+  })
+
   window.open(`${doc.Link}`, '_blank');
  })
 })
@@ -673,11 +701,17 @@ function verificarTela() {
 // Executa ao carregar
 verificarTela();
 
-
-
-
-
 botao.addEventListener('click', function() {
+  var IDU= sessionStorage.getItem('idUser');
+  var hora= sessionStorage.getItem('hora')
+  var data= sessionStorage.getItem('data')
+  var dbfid=firebase.firestore();
+  dbfid.collection('Clicks_BTNLojas').doc(`${IDU}_${hora}`).set({
+    ID:IDU,
+    Produto:doc.Titulo,
+     Codigo:doc.ID,
+    DATA:`${data}-${hora}`,
+  })
 window.open(`${doc.Link}`, '_blank');
 })
 img.addEventListener('click', function() {
@@ -703,6 +737,18 @@ document.body.style.paddingRight = '0px';
 })
 
  document.getElementById('btnLoja').addEventListener('click', function() {
+   var IDU= sessionStorage.getItem('idUser');
+   var hora= sessionStorage.getItem('hora')
+   var data= sessionStorage.getItem('data')
+  var dbfid=firebase.firestore();
+  dbfid.collection('Clicks_BTNLojas').doc(`${IDU}_${hora}`).set({
+    ID:IDU,
+    Produto:doc.Titulo,
+    Codigo:doc.ID,
+    DATA:`${data}-${hora}`,
+  })
+
+
   window.open(`${doc.Link}`, '_blank');
  })
 })
@@ -811,3 +857,27 @@ window.open(whatsappLink, "_blank");
 setTimeout(function(){
    cancelar() 
 },1000)
+document.getElementById('divQuemSomos').style.display='none';
+
+
+
+
+//IDUSER
+function iduser(){
+  var caracteres_ = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789abcdefghijlmnopqrstuvxzywk';
+  var idU= sessionStorage.getItem('idUser');
+
+  if(!idU||idU==''){
+var codigoIdUser = '';
+for (let i = 0; i < 8; i++) {
+codigoIdUser += caracteres_.charAt(Math.floor(Math.random() * caracteres_.length));
+sessionStorage.setItem('idUser', codigoIdUser);
+}
+  } else{
+    
+  }
+
+  
+}
+
+iduser()

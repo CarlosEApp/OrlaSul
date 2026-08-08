@@ -90,6 +90,7 @@ var link=document.getElementById('links').value;
 var link2=document.getElementById('outroLink').value;
 var lista=document.getElementById('Empresa').value;
 var Nicho=document.getElementById('nichos').value;
+var sublista=document.getElementById('SubLista').value;
 var refence='png';
 
 const file = event.target.files[0]
@@ -138,6 +139,7 @@ var lista=document.getElementById('Empresa').value;
 var imagem=document.getElementById('Cad_img').src;
 var nomeIMG=sessionStorage.getItem('Nome_Imagem')
 var Nicho=document.getElementById('nichos').value;
+var sublista=document.getElementById('SubLista').value;
 
 if(!código||!lista||!titulo||!valor||!Nicho){
      Swal.fire('Preencha os campos!','','')
@@ -155,6 +157,7 @@ Link:link,
 Link2:link2,
 Empresa:lista,
 Lista:lista,
+SubLista:sublista,
 URLIMG:imagem,
 NomeIMG: nomeIMG,
 Nichos:Nicho,
@@ -175,6 +178,7 @@ Link:link,
 Link2:link2,
 Empresa:lista,
 Lista:'Geraldb',
+SubLista:sublista,
 URLIMG:imagem,
 NomeIMG: nomeIMG,
 Nichos:Nicho,
@@ -268,6 +272,7 @@ document.getElementById('Cad_img').src='../SRC/Profile-PNG-Images.png';
 sessionStorage.setItem('Nome_Imagem','')
 document.getElementById('Funcao').value='';
 document.getElementById('nichos').value='';
+document.getElementById('SubLista').value='';
 }
 
 
@@ -370,12 +375,10 @@ document.getElementById('Código').value=doc.ID;
 document.getElementById('divCadastro').style.display='block';
 document.getElementById('divProdCadastrados').style.display='none';
 
-var NCH= doc.Nichos
-if(!NCH){
-document.getElementById('nichos').value='';
-}else{
+
 document.getElementById('nichos').value=doc.Nichos;
-}
+document.getElementById('SubLista').value=doc.SubLista;
+
 //var resp = document.getElementById('inputNome');
 //resp.disabled = true;
 //var resp2=document.getElementById('selectDoc');

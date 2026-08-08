@@ -89,7 +89,7 @@ padding: 10px;
 border-radius: 5px;
 font-size: clamp(1rem, 0.3vw  + 0.5rem, 1rem);
 }
-#Empresa, #nichos, #Empresa_, #nichos_{
+#Empresa, #nichos, #Empresa_, #nichos_,#SubLista{
 background-color: black;
 color: aliceblue;
 cursor: pointer;
