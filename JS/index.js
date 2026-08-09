@@ -391,6 +391,7 @@ var timer;
     
        Swal.fire({
         title: ``,
+        html:`<h4 id='h2Desculpe'> </h4>`,
         text: ``,
         imageUrl: 'SRC/desculpa_.png',
         background: '#ffffff04',
@@ -406,7 +407,13 @@ var timer;
         document.body.style.paddingRight = '0px';   
         }
         })
+        var coll= sessionStorage.getItem('Coll')
+        if(coll=='Geraldb'){
+          var coll='nossas <b> Listas</b>'
+        }
+        document.getElementById('h2Desculpe').innerHTML=`Não encontramos o que você procura em ${coll}`
         cancelar() 
+      
       }, 2100);
     }
 
@@ -785,8 +792,9 @@ document.getElementById('laterParagrafos').addEventListener('click', function(e)
     sessionStorage.setItem('Itens+','')
     sessionStorage.setItem('ItensTotal','')
     sessionStorage.setItem('Coll', e.target.title)
+      //alert(e.target.title);
     listaInicial()
-    //alert(e.target.title);
+  
   }
 });
 document.getElementById('laterParagrafos').addEventListener('click', function(e) {
