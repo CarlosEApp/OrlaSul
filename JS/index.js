@@ -318,6 +318,7 @@ document.getElementById('myProgresos').style.display = 'none'
 sessionStorage.setItem('SeçãoAberta','Iniciado')
 document.getElementById('topo').click();
  document.getElementById('togle').click();
+   
  iduser()
 swalclose()
 clearInterval(id)
@@ -499,10 +500,12 @@ list.appendChild(div);
 
 function verificarTela() {
   if (window.innerWidth < 1100) {
-    document.getElementById('a_pesquisaMobile').click();
+    //document.getElementById('a_pesquisaMobile').click();
+    document.getElementById('mercadoLivre').scrollIntoView({behavior: 'smooth'});
 
   } else {
-    document.getElementById('a_pesquisa').click();
+    //document.getElementById('a_pesquisa').click();
+     document.getElementById('main_Um').scrollIntoView({behavior: 'smooth'});
   }
 }
 
@@ -691,12 +694,17 @@ list.appendChild(div);
 
 function verificarTela() {
   if (window.innerWidth < 1100) {
-    document.getElementById('a_pesquisaMobile').click();
+    //document.getElementById('a_pesquisaMobile').click();
+    document.getElementById('mercadoLivre').scrollIntoView({behavior: 'smooth'});
 
   } else {
-    document.getElementById('a_pesquisa').click();
+   // document.getElementById('a_pesquisa').click();
+     document.getElementById('main_Um').scrollIntoView({behavior: 'smooth'});
   }
 }
+document.getElementById('inputPesquisar').blur();
+
+
 
 // Executa ao carregar
 verificarTela();
@@ -856,6 +864,9 @@ window.open(whatsappLink, "_blank");
 
 setTimeout(function(){
    cancelar() 
+
+     document.getElementById('topo').click()
+
 },1000)
 document.getElementById('divQuemSomos').style.display='none';
 
@@ -881,3 +892,152 @@ sessionStorage.setItem('idUser', codigoIdUser);
 }
 
 iduser()
+
+
+// Lista de mais procurados
+
+sessionStorage.setItem('Itens+_', '')
+sessionStorage.setItem('Coll_', 'Geraldb')
+function listaMaisProcurados(){
+
+var itens_ = 0
+var respItens= sessionStorage.getItem('Itens+_')
+if(!respItens||respItens==''){
+ var respItens=12
+  sessionStorage.setItem('Itens+_', 12)
+}else{
+ var respItens=sessionStorage.getItem('Itens+_')
+}
+
+var list_= document.getElementById('list_');
+list_.innerHTML=''
+var coll_= sessionStorage.getItem('Coll_')
+var dbM=firebase.firestore();
+var produtosRef_ = dbM.collection(`${coll_}`);
+produtosRef_.get().then((querySnapshot) => {
+querySnapshot.forEach(doc => {
+var doc = doc.data();
+var itemss_= querySnapshot.size;
+sessionStorage.setItem('ItensTotal_', itemss_)
+
+  if(doc.Link2){
+
+itens_++
+ if(itens_<=respItens){
+cancelar() 
+var div = document.createElement('div');
+var div2 = document.createElement('div');
+var div3 = document.createElement('div');
+var div4 = document.createElement('div');
+div.className = 'divList_';
+div2.className = 'divList2';
+div3.className = 'divList3';
+div4.className = 'divList4';
+
+var img = document.createElement('img');
+img.src = doc.URLIMG;
+img.alt = doc.Titulo;
+img.className = 'imgList';
+
+var p= document.createElement('p');
+p.textContent = doc.Empresa;
+p.className = 'pEmpresa';
+
+var h2 = document.createElement('h3');
+h2.textContent = doc.Titulo;
+h2.className = 'h2Titulo';
+
+var p2 = document.createElement('p');
+p2.textContent = doc.SubTitulo;
+p2.className = 'pSubtitulo';
+
+var vl=doc.Valor.split(',');
+var v1=vl[0]
+var v2=vl[1]
+
+var h3 = document.createElement('p');
+
+h3.innerHTML = `R$<b id='bv'> ${v1}</b> <b id='bvc'>${v2}</b>`;
+h3.className = 'h3Valor';
+
+var botao = document.createElement('button');
+botao.textContent = 'Ir para loja';
+botao.className = 'btnList_';
+
+div2.appendChild(img);
+div3.appendChild(p);
+div3.appendChild(h2);
+div3.appendChild(p2);
+div4.appendChild(h3);
+div4.appendChild(botao);
+
+div.appendChild(div2);
+div.appendChild(div3);
+div.appendChild(div4);
+
+list_.appendChild(div);
+
+
+botao.addEventListener('click', function() {
+   var IDU= sessionStorage.getItem('idUser');
+   var hora= sessionStorage.getItem('hora')
+   var data= sessionStorage.getItem('data')
+  var dbfid=firebase.firestore();
+   dbfid.collection('Clicks_BTNLojas').doc(`${IDU}_${hora}`).set({
+    ID:IDU,
+    Produto:doc.Titulo,
+     Codigo:doc.ID,
+    DATA:`${data}-${hora}`,
+  })
+window.open(`${doc.Link}`, '_blank');
+})
+img.addEventListener('click', function() {
+Swal.fire({
+title: `${doc.Empresa}`,
+
+text: ``,
+html: ` <button id='btnLoja' class='btnList'>Ir para loja</button>`,
+imageUrl: doc.URLIMG,
+imageAlt: `${doc.Titulo}`,
+background: '#ffffff',
+color: '#252525', // cor do texto });
+showCloseButton: true,   // habilita o "X"
+backdrop: true, // habilita o fundo escuro
+allowOutsideClick: false,
+showConfirmButton: false,
+customClass: {
+popup: 'my-customProduto' // Aplica a classe CSS personalizada
+},
+didOpen: () => {
+document.body.style.paddingRight = '0px';   
+}
+})
+
+ document.getElementById('btnLoja').addEventListener('click', function() {
+
+   var IDU= sessionStorage.getItem('idUser');
+   var hora= sessionStorage.getItem('hora')
+   var data= sessionStorage.getItem('data')
+
+   var dbfid=firebase.firestore();
+   dbfid.collection('Clicks_BTNLojas').doc(`${IDU}_${hora}`).set({
+    ID:IDU,
+    Produto:doc.Titulo,
+     Codigo:doc.ID,
+    DATA:`${data}-${hora}`,
+  })
+
+  window.open(`${doc.Link2}`, '_blank');
+ })
+})
+//swal(`${doc.Empresa}`,`${doc.Titulo} \n\n Promoção ${doc.Valor}`, doc.URLIMG)
+//alert(itens)
+}
+ }
+})
+})
+}
+listaMaisProcurados()
+
+
+document.getElementById('inputPesquisar').scrollIntoView({behavior: 'smooth'});
