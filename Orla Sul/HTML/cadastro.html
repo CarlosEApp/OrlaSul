@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cadastro</title>
+<link rel="shortcut icon" href="../SRC/Logo_icone.png" type="image/x-icon">
+
+
+<meta name="description" content="Orla Sul - Encontre Aqui! Ofertas incriveis dos melhores produtos e principais  plataformas de vendas sem sair de casa">
+<meta name="keywords" content="Orla Sul, produtos,comprar online, descontos, ofertas, variedades,promoções, descontos, melhores preços">
+<!-- Autor -->
+<meta name="author" content="Shopping Orla Sul">
+
+<meta property="og:title" content="Orla Sul - Encontre Aqui! Ofertas incriveis dos melhores produtos e principais  plataformas de vendas sem sair de casa">
+<meta property="og:description" content="Descubra os melhores produtos com descontos exclusivos.">
+<meta property="og:image" content="https://orlasul.netlify.app/../SRC/metaTegimg.png">
+<meta property="og:url" content="https://orlasul.netlify.app/">
+<meta property="og:type" content="website">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://kit.fontawesome.com/60de48ee9a.js" crossorigin="anonymous"></script>
+<script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-database-compat.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+<meta name="google-site-verification" content="I5QDbpWaGPHDZCWZITuNbd94oKGkibaclmduJlckKqU" />
+<meta name="msvalidate.01" content="91A47097945E8CDB896C9CA2D3B40518" />
+
+<link rel="stylesheet" href="../CSS/cadastro.css">
+</head>
+<body>
+
+    <div id="divGeral">
+
+        <header>
+            <div id="header_um"> 
+                <h1>Cadastros</h1> <i id="I_Casa" class="fa-solid fa-house"> <b id="bHome"> Home</b></i>   <i id="menu" class="fa-solid fa-bars"></i>
+            </div>
+            <div id="header_dois">
+                <select name="Função" id="Funcao"  title="Escolha uma operação">
+                     <option value="" disabled>Operação</option>
+                      <option value="Cadastrar">Cadastrar</option>
+                         <option value="Cadastrados">Prod. Cadastrados</option>
+                             <option value="sair"></option>
+                               <option value="sair">Exit</option>
+                </select>
+
+            </div>
+        </header>
+
+        <main>
+            <div id="main_um">
+
+                <div id="divCadastro">
+                    <label for="" id="sairCad">Exit</label>
+                  <h1>Cadastro</h1>
+                  <div id="cad">
+                    <input type="text" title="Código" id="Código" placeholder="000 0000" disabled> 
+                    <img id="Cad_img" src="../SRC/Profile-PNG-Images.png" alt="Imagem" width="120px">
+                     <input id="fileInput" type="file" title="Imagem-File">
+                 <select name="Empresa" id="Empresa" title="Escolha uma Empresa">
+                     <option value="" disabled>Empresa</option>
+                      <option value="Amazon">Amazom</option>
+                         <option value="Mercado Livre">Mercado Livre</option>
+                             <option value="sair"></option>
+                               <option value="sair">Exit</option>
+                   </select>
+                   
+                   <select name="nichos" id="nichos" title="Escolha um nicho">
+                     <option value="">Nicho</option>
+                      <option value="Vestuário">Vestuário</option>
+                       <option value="Calçados">Calçados</option>
+                        <option value="Roupas Intimas">Roupas Intimas</option>
+                         <option value="Moda Praia">Moda Praia</option>
+                          <option value="Perfumaria">Perfumaria</option>
+                          <option value="Destaques">Destaques</option>
+                   </select>
+                    <select name="subLista" id="SubLista" title="Escolha uma SubLista">
+                     <option value="">SubLista</option>
+                      <option value="Camisas masculinas">Camisas masculina</option>
+                      <option value="Camisas femininas">Camisas femininas</option>
+                       <option value="Calças masculinas">Calças masculinas</option>
+                       <option value="Calças femininas">Calças femininas</option>
+                       <option value="Tênis masculinos">Tênis masculino</option>
+                       <option value="Tênis femininos">Tênis feminino</option>
+                        <option value="Sapatos masculinos">Sapatos masculino</option>
+                        <option value="Sapatos femininos">Sapatos </option>
+                         <option value="Cuecas masculina">Cuecas masculina</option>
+                          <option value="Lingeries femininas">Lingeries femininas</option>
+                          <option value="Destaques">Destaques</option>
+                   </select>
+                    
+                    <input type="text" title="Titulo" id="titulo" placeholder="Titulo do Produto">
+                    
+                    <input type="text" title="subTitulo" id="subT" placeholder="Sub-Titulo">
+                    
+                    <input type="text" title="valor" id="Valor" placeholder="R$ 999,99  Valor">
+                    
+                    <input type="text" id="obs" title="Observação" placeholder="Observações">
+                    
+                    <input type="text" title="Link" id="links" placeholder="Link do produto">
+                    
+                    <input type="text" title="outros links" id="outroLink" placeholder="Outros links">
+                    <br>
+                    <div id="btnSalvar"> <button id="salvar" title="Salvar" >Salvar</button></div>
+                  </div>
+                </div>
+
+                <div id="divProdCadastrados">
+                    <h1>Prod. Cadastrados</h1>
+                    <label for="" id="sairProdCad">Exit</label>
+                    <br>
+                    <div id="seleçoes"> 
+                  <select name="Empresa_" id="Empresa_" title="Escolha uma Empresa">
+                     <option value="">Empresa</option>
+                      <option value="Amazon">Amazom</option>
+                         <option value="Mercado Livre">Mercado Livre</option>
+                   </select>
+                   <select name="nichos_" id="nichos_" title="Escolha um nicho">
+                     <option value="">Nicho</option>
+                      <option value="Vestuário">Vestuário</option>
+                       <option value="Calçados">Calçados</option>
+                        <option value="Roupas Intimas">Roupas Intimas</option>
+                         <option value="Moda Praia">Moda Praia</option>
+                          <option value="Perfumaria">Perfumaria</option>
+                          <option value="Destaques">Destaques</option>
+                   </select>
+                    </div>
+                    <div id="divlista">
+                        <div id="list"></div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+    </div>
+    <footer>
+        
+    </footer>
+
+
+
+
+    <script type="module" src="../JS/cadastro.js"></script>
+</body>
+</html>
