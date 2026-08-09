@@ -318,7 +318,7 @@ document.getElementById('myProgresos').style.display = 'none'
 sessionStorage.setItem('SeçãoAberta','Iniciado')
 document.getElementById('topo').click();
  document.getElementById('togle').click();
-   
+      document.getElementById('div_lista_').style.display='block';
  iduser()
 swalclose()
 clearInterval(id)
@@ -704,8 +704,6 @@ function verificarTela() {
 }
 document.getElementById('inputPesquisar').blur();
 
-
-
 // Executa ao carregar
 verificarTela();
 
@@ -756,24 +754,16 @@ document.body.style.paddingRight = '0px';
     DATA:`${data}-${hora}`,
   })
 
-
   window.open(`${doc.Link}`, '_blank');
  })
 })
-
-
 //swal(`${doc.Empresa}`,`${doc.Titulo} \n\n Promoção ${doc.Valor}`, doc.URLIMG)
 //alert(itens)
-
 }
 }
 })
 })
-
 })
-
-
-
 
 document.getElementById('btnMais').addEventListener('click', function(){
    var resp=sessionStorage.getItem('ItensTotal')
@@ -809,7 +799,6 @@ document.getElementById('laterParagrafos').addEventListener('click', function(e)
     //alert(e.target.title);
   }
 });
-
 
 //facebook
 document.getElementById('P_facebook').addEventListener('click', function(){
@@ -864,13 +853,10 @@ window.open(whatsappLink, "_blank");
 
 setTimeout(function(){
    cancelar() 
-
+   document.getElementById('div_lista_').style.display='block';
      document.getElementById('topo').click()
-
 },1000)
 document.getElementById('divQuemSomos').style.display='none';
-
-
 
 
 //IDUSER

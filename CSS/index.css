@@ -919,3 +919,6 @@ font-size: clamp(1rem, 0.3vw  + 0.5rem, 1rem);
 #h1Oferta{
 margin-bottom: 30px;
 }
+#div_lista_{
+    display: none;
+}
