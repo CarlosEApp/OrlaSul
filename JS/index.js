@@ -431,8 +431,8 @@ var nichos=sessionStorage.getItem('STORnicho')
 var itens = 0
 var respItens= sessionStorage.getItem('Itens+')
 if(!respItens||respItens==''){
- var respItens=12
-  sessionStorage.setItem('Itens+', 12)
+ var respItens=6
+  sessionStorage.setItem('Itens+', 6)
 }else{
  var respItens=sessionStorage.getItem('Itens+')
 }
