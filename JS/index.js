@@ -852,7 +852,7 @@ document.getElementById('P_EmailFooter').addEventListener('click', function(){
 //Compartilhar pagina
 document.getElementById('I_compartilhar').addEventListener('click',function(){
 var url = "https://orlasul.netlify.app/";
-var titulo = `Encontre aqui ofertas incriveis 👉  ${url}`;
+var titulo = `👉 Encontre aqui ofertas incriveis  ${url}`;
 var whatsappMessage = `${titulo}\n`;
 var whatsappLink = `https://wa.me/?text=${encodeURIComponent(whatsappMessage)}`;
 // abre o WhatsApp com a mensagem
