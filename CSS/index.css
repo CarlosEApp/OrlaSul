@@ -43,10 +43,10 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.486); /* camada translúcida */
+  background-color: rgba(255, 255, 255, 0.568); /* camada translúcida */
   z-index: -1;
 }
-@media (max-width: 1520px) {
+@media (max-width: 1620px) {
 body::before {
   content: "";
   position: fixed;
@@ -54,7 +54,7 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.623); /* camada translúcida */
+  background-color: rgba(255, 255, 255, 0.671); /* camada translúcida */
   z-index: -1;
 }
 }
@@ -66,7 +66,7 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.74); /* camada translúcida */
+  background-color: rgba(255, 255, 255, 0.795); /* camada translúcida */
   z-index: -1;
 }
 }
@@ -78,7 +78,7 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.849); /* camada translúcida */
+  background-color: rgba(255, 255, 255, 0.904); /* camada translúcida */
   z-index: -1;
 }
 
