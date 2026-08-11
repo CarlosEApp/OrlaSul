@@ -31,76 +31,12 @@ font-family: 'Poppins', sans-serif;
 background-color: rgb(253, 252, 252);
 margin: 0%;
 padding: 0%;
-background-image: url('../SRC/fundoTela.png');
-background-size: cover;
-background-repeat: no-repeat;
- 
-}
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.568); /* camada translúcida */
-  z-index: -1;
-}
-@media (max-width: 1620px) {
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.671); /* camada translúcida */
-  z-index: -1;
-}
-}
-@media (max-width: 1320px) {
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.795); /* camada translúcida */
-  z-index: -1;
-}
-}
-@media (max-width: 1100px) {
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.904); /* camada translúcida */
-  z-index: -1;
 }
 
-}
-@media (max-width: 800px) {
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.952); /* camada translúcida */
-  z-index: -1;
-}
-
-}
 #divGeral{
 margin: auto;
 width: 100%;
 max-width: 1900px;
-
 }
 header{
 margin: auto;
@@ -202,9 +138,10 @@ main{
 margin: auto;
 width: 100%;
 max-width: 1920px;
-
 }
+
 #main_Um{
+ position: relative;
 padding-top: 160px;
 margin: auto;
 width: 100%;
@@ -213,8 +150,72 @@ min-height: 50vh;
 background-color: rgba(255, 251, 251, 0);
 color: rgb(32, 32, 32);
 font-family: 'Poppins', sans-serif;
-margin-bottom: 100px;
+background-image: url('../SRC/fundoTela.png');
+background-size: cover;
+background-repeat: no-repeat;
 padding-bottom: 50px;
+z-index: 0; 
+}
+
+#main_Um::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.658); /* camada translúcida */
+  z-index:-1;
+}
+@media (max-width: 1620px) {
+#main_Um::before {
+  content: "";
+ position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.671); /* camada translúcida */
+  z-index: -1;
+}
+}
+@media (max-width: 1320px) {
+#main_Um::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.795); /* camada translúcida */
+  z-index: -1;
+}
+}
+@media (max-width: 1100px) {
+#main_Um::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.904); /* camada translúcida */
+  z-index: -1;
+}
+
+}
+@media (max-width: 800px) {
+#main_Um::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.952); /* camada translúcida */
+  z-index: -1;
+}
+
 }
 #divheader_dois{
 margin: auto;
@@ -257,6 +258,7 @@ min-height: 20vh;
 background-color: rgba(0, 0, 0, 0);
 overflow: hidden;
 margin-top: 1px;
+ position: relative;
 }
 #divLista{
 margin: auto;
@@ -980,7 +982,7 @@ max-width: 1400px;
 min-height: 20vh;
 min-height: 20vh;
 background-color: rgba(255, 254, 216, 0);
-margin-top: 180px;
+margin-top: 50px;
 margin-bottom: 30px;
 padding-top: 46px;
 display: none;
