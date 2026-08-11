@@ -600,6 +600,7 @@ var tecla = document.getElementById('inputPesquisar');
 // Escuta a tecla pressionada
 tecla.addEventListener('keydown', function(event) {
   if (event.key === 'Enter') {
+     document.getElementById('magalu').scrollIntoView({behavior: 'smooth'});
     document.getElementById('btnPesquisar').click();
   }
 });
