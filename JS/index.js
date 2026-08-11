@@ -539,7 +539,7 @@ background: '#ffffff',
 color: '#252525', // cor do texto });
 showCloseButton: true,   // habilita o "X"
 backdrop: true, // habilita o fundo escuro
-allowOutsideClick: false,
+allowOutsideClick: true,
 showConfirmButton: false,
 customClass: {
 popup: 'my-customProduto' // Aplica a classe CSS personalizada
@@ -734,7 +734,7 @@ background: '#ffffff',
 color: '#252525', // cor do texto });
 showCloseButton: true,   // habilita o "X"
 backdrop: true, // habilita o fundo escuro
-allowOutsideClick: false,
+allowOutsideClick: true,
 showConfirmButton: false,
 customClass: {
 popup: 'my-customProduto' // Aplica a classe CSS personalizada
@@ -992,7 +992,7 @@ background: '#ffffff',
 color: '#252525', // cor do texto });
 showCloseButton: true,   // habilita o "X"
 backdrop: true, // habilita o fundo escuro
-allowOutsideClick: false,
+allowOutsideClick: true,
 showConfirmButton: false,
 customClass: {
 popup: 'my-customProduto' // Aplica a classe CSS personalizada

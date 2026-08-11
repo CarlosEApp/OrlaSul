@@ -944,7 +944,7 @@ background-color: rgb(0, 38, 253);
 @media (max-width: 640px) {
 .divList,.divList_{
 width: 100%;
-max-width: 380px;
+max-width: 330px;
 overflow: hidden;
 margin-bottom: 70px;
 font-family: 'Poppins', sans-serif;
