@@ -891,6 +891,11 @@ max-width: 400px;
 overflow: hidden;
 margin-bottom: 30px;
 font-family: 'Poppins', sans-serif;
+
+box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.514);
+border-radius: 20px;
+background-color: #ffffff;
+padding-bottom: 10px;
 }
 #bv{
 font-size: clamp(2.300rem, 0.3vw  + 0.5rem, 2.300rem);
@@ -902,6 +907,13 @@ text-shadow: 0px 1px 1px rgb(0, 0, 0);
 .btnList,.btnList_{
 padding: 12px;
 width:40%;
+}
+.imgList{
+margin: auto;
+width: 100%;
+cursor: pointer;
+transition: transform 0.3s ease;
+border-radius: 10px;
 }
 
 }
