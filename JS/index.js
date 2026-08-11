@@ -26,6 +26,9 @@ document.webkitCancelFullScreen();
 }
 }
 })
+function verificarTelaTG() {
+  document.getElementById('togle').click();
+}
 //Data e Hora
 setInterval(function() {
 const newDate = new Date()
@@ -60,16 +63,8 @@ firebase.initializeApp(firebaseConfig);
 //////////////////////////////////////////////////////////
 
 
-function initList(){
-    var db = firebase.firestore();
-    db.collection("cartoes").doc('teste').set({
-        Teste: "o Teste foi realizado com sucesso"
-    }).then(() => {
-        alert("O Teste foi realizado com sucesso");
-    });
 
-}
-//initList()
+
 //login google
 function loginComGoogle() {
   var lblG=document.getElementById('labellogarLater');
@@ -317,7 +312,7 @@ i = 0;
 document.getElementById('myProgresos').style.display = 'none'
 sessionStorage.setItem('SeçãoAberta','Iniciado')
 document.getElementById('topo').click();
- document.getElementById('togle').click();
+ //document.getElementById('togle').click();
       document.getElementById('div_lista_').style.display='block';
  iduser()
 swalclose()
@@ -508,7 +503,7 @@ list.appendChild(div);
 function verificarTela() {
   if (window.innerWidth < 1100) {
     //document.getElementById('a_pesquisaMobile').click();
-    document.getElementById('mercadoLivre').scrollIntoView({behavior: 'smooth'});
+     document.getElementById('magalu').scrollIntoView({behavior: 'smooth'});
 
   } else {
     //document.getElementById('a_pesquisa').click();
@@ -702,7 +697,7 @@ list.appendChild(div);
 function verificarTela() {
   if (window.innerWidth < 1100) {
     //document.getElementById('a_pesquisaMobile').click();
-    document.getElementById('mercadoLivre').scrollIntoView({behavior: 'smooth'});
+    document.getElementById('magalu').scrollIntoView({behavior: 'smooth'});
 
   } else {
    // document.getElementById('a_pesquisa').click();
@@ -863,6 +858,7 @@ setTimeout(function(){
    cancelar() 
    document.getElementById('div_lista_').style.display='block';
      document.getElementById('topo').click()
+     verificarTelaTG() 
 },1000)
 document.getElementById('divQuemSomos').style.display='none';
 
@@ -931,7 +927,7 @@ div4.className = 'divList4';
 var img = document.createElement('img');
 img.src = doc.URLIMG;
 img.alt = doc.Titulo;
-img.className = 'imgList';
+img.className = 'imgList_';
 
 var p= document.createElement('p');
 p.textContent = doc.Empresa;
@@ -970,7 +966,6 @@ div.appendChild(div3);
 div.appendChild(div4);
 
 list_.appendChild(div);
-
 
 botao.addEventListener('click', function() {
    var IDU= sessionStorage.getItem('idUser');
@@ -1035,3 +1030,4 @@ listaMaisProcurados()
 
 
 document.getElementById('inputPesquisar').scrollIntoView({behavior: 'smooth'});
+
