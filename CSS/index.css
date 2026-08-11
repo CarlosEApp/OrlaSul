@@ -41,7 +41,7 @@ max-width: 1900px;
 header{
 margin: auto;
 width: 100%;
-max-width: 19000px;
+max-width: 1900px;
 background-color: rgba(255, 255, 255, 0.76);
 padding-bottom: 0px;
 position: fixed;
@@ -961,6 +961,26 @@ padding: 12px;
 width:40%;
 }
 
+}
+@media (max-width: 360px) {
+.divList,.divList_{
+width: 82%;
+max-width: 400px;
+overflow: hidden;
+margin-bottom: 30px;
+font-family: 'Poppins', sans-serif;
+}
+#bv{
+font-size: clamp(2.300rem, 0.3vw  + 0.5rem, 2.300rem);
+color: rgb(2, 2, 2);
+font-family: 'Poppins', sans-serif;
+font-weight: bold;
+text-shadow: 0px 1px 1px rgb(0, 0, 0);
+}
+.btnList,.btnList_{
+padding: 12px;
+width:80%;
+}
 }
 #divBtnMais{
   float: right;
