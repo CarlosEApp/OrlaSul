@@ -150,13 +150,7 @@ min-height: 50vh;
 background-color: rgba(255, 251, 251, 0);
 color: rgb(32, 32, 32);
 font-family: 'Poppins', sans-serif;
-background-image: url('../SRC/fundoTela.png');
-background-size: cover;
-background-repeat: no-repeat;
-padding-bottom: 50px;
-z-index: 0; 
 }
-
 #main_Um::before {
   content: "";
   position: absolute;
@@ -164,59 +158,10 @@ z-index: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.658); /* camada translúcida */
+  background-color: rgba(255, 255, 255, 0.884); /* camada translúcida */
   z-index:-1;
 }
-@media (max-width: 1620px) {
-#main_Um::before {
-  content: "";
- position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.671); /* camada translúcida */
-  z-index: -1;
-}
-}
-@media (max-width: 1320px) {
-#main_Um::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.795); /* camada translúcida */
-  z-index: -1;
-}
-}
-@media (max-width: 1100px) {
-#main_Um::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.904); /* camada translúcida */
-  z-index: -1;
-}
 
-}
-@media (max-width: 800px) {
-#main_Um::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.952); /* camada translúcida */
-  z-index: -1;
-}
-
-}
 #divheader_dois{
 margin: auto;
 width: 100%;
@@ -267,6 +212,10 @@ background-color: rgba(255, 255, 255, 0);
 min-height: 20vh;
 margin-top: 1px;
 }
+.h2Titulo{
+font-size: clamp(2., 0.3vw  + 0.5rem, 2.200rem);
+
+}
 #divLateral h1 ,#divLista h1{
 width: 100%;
 text-align: center;
@@ -307,10 +256,10 @@ background-color: transparent;
 background-color: #f8f8ff;
 }
 #nichos option{
-    font-size: clamp(1.200rem, 0.3vw  + 0.5rem, 1.200rem);
-    color: #ffffff;
-    background-color: #ff4800;
-    cursor: pointer;
+font-size: clamp(1.200rem, 0.3vw  + 0.5rem, 1.200rem);
+color: #ffffff;
+background-color: #ff4800;
+cursor: pointer;
 
 }
 #nichos:hover{
@@ -395,8 +344,6 @@ font-size: clamp(1.700rem, 0.3vw  + 0.5rem, 1.700rem);
 padding: 5px;
 overflow: hidden;
 text-align: center;
-
-
 }
 #laterParagrafos #magalu img{
 width: 95%;
@@ -441,10 +388,10 @@ background-color: transparent;
 background-color: #f8f8ff;
 }
 #divLateral h1{
-    font-size: clamp(2.500rem, 0.3vw  + 0.5rem, 2.500rem);
-    margin-top: 0;
-    padding-top: 0;
-    padding-bottom: 30px;
+font-size: clamp(2.500rem, 0.3vw  + 0.5rem, 2.500rem);
+margin-top: 0;
+padding-top: 0;
+padding-bottom: 30px;
 }
 }
 
@@ -478,8 +425,6 @@ font-size: clamp(1rem, 0.3vw  + 0.5rem, 1.100rem);
 font-weight: bold;
 color: rgb(15, 15, 15);
 }
-
-
 
 @media (max-width: 840px) {
 #I_Casa{
@@ -567,7 +512,6 @@ padding-right: 20px;
 }
 .my-customTime img{
 width: 90%;
-
 }
 .my-customTime #btnTime{
 text-align: center;
@@ -660,7 +604,6 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 #menu_lateral #exitMenu:hover{
 color: rgb(223, 0, 111);
 }
-
 
 .my-admin{
 width: 99%;
@@ -827,11 +770,8 @@ width: 100%;
 max-width: 280px;
 margin-bottom: 10px;
 font-family: 'Poppins', sans-serif;
-box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.514);
-padding: 12px;
-border-radius: 20px;
-background-color: #ffffff;
-padding-bottom: 20px;
+
+padding-bottom: 10px;
 }
 .divList_{
 width: 100%;
@@ -840,15 +780,18 @@ min-width: 220px;
 margin-bottom: 10px;
 font-family: 'Poppins', sans-serif;
 box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.514);
-padding: 12px;
 border-radius: 20px;
 background-color: #ffffff;
-padding-bottom: 15px;
+padding-bottom: 10px;
 }
 .divList2{
     text-align: center;
     overflow: hidden;
 }
+.divList3{
+  padding: 10px;
+}
+
 .imgList{
 margin: auto;
 width: 90%;
@@ -858,7 +801,7 @@ border-radius: 10px;
 }
 .imgList_{
 margin: auto;
-width: 95%;
+width: 100%;
 cursor: pointer;
 transition: transform 0.3s ease;
 border-radius: 10px;
