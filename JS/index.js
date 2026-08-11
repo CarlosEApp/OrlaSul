@@ -1032,16 +1032,6 @@ listaMaisProcurados()
 
 document.getElementById('inputPesquisar').scrollIntoView({behavior: 'smooth'});
 
-setInterval(function(){
- var div= document.getElementById('divBtnMais');
-   var estilo = window.getComputedStyle(div);
-  var corDeFundo = estilo.backgroundColor;
 
- if(corDeFundo=='rgba(255, 72, 0, 0)'){
-  
-  //Swal.fire('','Click Para ver mais produtor e oferta!','')
-  } else{
 
-  }
-
-},500)
+//manipulação por cor
