@@ -426,8 +426,8 @@ var nichos=sessionStorage.getItem('STORnicho')
 var itens = 0
 var respItens= sessionStorage.getItem('Itens+')
 if(!respItens||respItens==''){
- var respItens=6
-  sessionStorage.setItem('Itens+', 6)
+ var respItens=12
+  sessionStorage.setItem('Itens+', 12)
 }else{
  var respItens=sessionStorage.getItem('Itens+')
 }
@@ -1032,3 +1032,16 @@ listaMaisProcurados()
 
 document.getElementById('inputPesquisar').scrollIntoView({behavior: 'smooth'});
 
+setInterval(function(){
+ var div= document.getElementById('divBtnMais');
+   var estilo = window.getComputedStyle(div);
+  var corDeFundo = estilo.backgroundColor;
+
+ if(corDeFundo=='rgba(255, 72, 0, 0)'){
+  
+  //Swal.fire('','Click Para ver mais produtor e oferta!','')
+  } else{
+
+  }
+
+},500)
