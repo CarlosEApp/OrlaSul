@@ -478,7 +478,7 @@ var v2=vl[1]
 
 var h3 = document.createElement('p');
 
-h3.innerHTML = `R$<b id='bv'>${v1}</b><b id='bvc'>${v2}</b>`;
+h3.innerHTML = `R$ <b id='bv'>${v1}</b><b id='bvc'>${v2}</b>`;
 h3.className = 'h3Valor';
 
 var botao = document.createElement('button');
@@ -738,7 +738,7 @@ var v2=vl[1]
 
 var h3 = document.createElement('p');
 
-h3.innerHTML = `R$<b id='bv'>${v1}</b><b id='bvc'>${v2}</b>`;
+h3.innerHTML = `R$ <b id='bv'>${v1}</b><b id='bvc'>${v2}</b>`;
 h3.className = 'h3Valor';
 
 var botao = document.createElement('button');
@@ -1033,7 +1033,7 @@ var v2=vl[1]
 
 var h3 = document.createElement('p');
 
-h3.innerHTML = `R$<b id='bv'>${v1}</b><b id='bvc'>${v2}</b>`;
+h3.innerHTML = `R$  <b id='bv'>${v1}</b><b id='bvc'>${v2}</b>`;
 h3.className = 'h3Valor';
 
 var botao = document.createElement('button');

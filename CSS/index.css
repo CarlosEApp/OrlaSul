@@ -756,7 +756,7 @@ justify-content: space-around;
 align-items: center;
 flex-wrap: wrap;
 gap: 20px;
-padding-bottom: 30px;
+padding-bottom: 20px;
 background-color: #ffffff00;
 }
 #list_{
@@ -889,6 +889,50 @@ text-shadow: 0px 1px 1px rgb(0, 0, 0);
 .btnList:hover,.btnList_:hover{
 background-color: rgb(0, 38, 253);
 }
+
+#divBtnMais{
+float: right;
+width: 50%;
+max-width: 90px;
+cursor: pointer;
+text-align: center;
+background-color: #fd5000;
+color: #f3f3ff;
+border:0cap;
+font-family: 'Poppins', sans-serif;
+font-size: clamp(1.600rem, 0.3vw  + 0.5rem, 1.600rem);
+border-top-right-radius: 100%;
+border-bottom-left-radius: 20%;
+margin-right: 50px;
+padding-left: 7px;
+padding-right: 20px;
+padding-top: 0px;
+
+}
+#divBtnMais:hover{
+background-color: #ff480000;
+color: #f3f3ff;
+}
+#btnMais{
+background-color: transparent;
+border: 0cap;
+color: #f3f3ff;
+font-size: clamp(1rem, 0.3vw  + 0.5rem, 1rem);
+font-weight: bold;
+cursor: pointer;
+
+}
+#divBtnMais:hover #btnMais,#divBtnMais:hover #bbmais{
+color: #fd2600;
+background-color: transparent;
+}
+#bbmais{
+font-size: clamp(4rem, 0.3vw  + 0.5rem, 4rem);
+background-color: transparent;
+cursor: pointer;
+color: #f3f3ff;
+}
+
 @media (max-width: 640px) {
 .divList,.divList_{
 width: 82%;
@@ -929,6 +973,25 @@ background-position: center;
 background-color: rgba(14, 14, 13, 0.932);
 margin-top: 70px;
 }
+#divBtnMais{
+float: right;
+width: 50%;
+max-width: 90px;
+cursor: pointer;
+text-align: center;
+background-color: #fd5000;
+color: #f3f3ff;
+border:0cap;
+font-family: 'Poppins', sans-serif;
+font-size: clamp(2rem, 0.3vw  + 0.5rem, 2rem);
+border-top-right-radius: 100%;
+border-bottom-left-radius: 20%;
+margin-right: 50px;
+padding-left: 12px;
+padding-right: 25px;
+padding-top: 10px;
+
+}
 }
 @media (max-width: 360px) {
 .divList,.divList_{
@@ -951,44 +1014,7 @@ width:80%;
 }
 
 }
-#divBtnMais{
-float: right;
-width: 50%;
-max-width: 90px;
-cursor: pointer;
-text-align: center;
-background-color: #ff4800;
-color: #f3f3ff;
-border:0cap;
-font-family: 'Poppins', sans-serif;
-font-size: clamp(1.600rem, 0.3vw  + 0.5rem, 1.600rem);
-border-radius: 25px;
-margin-right: 50px;
 
-}
-#divBtnMais:hover{
-background-color: #ff480000;
-color: #f3f3ff;
-}
-#btnMais{
-background-color: transparent;
-border: 0cap;
-color: #f3f3ff;
-font-size: clamp(1rem, 0.3vw  + 0.5rem, 1rem);
-font-weight: bold;
-cursor: pointer;
-
-}
-#divBtnMais:hover #btnMais,#divBtnMais:hover #bbmais{
-color: #001bb4;
-background-color: transparent;
-}
-#bbmais{
-font-size: clamp(4rem, 0.3vw  + 0.5rem, 4rem);
-background-color: transparent;
-cursor: pointer;
-color: #f3f3ff;
-}
 .my-customProduto{
 border-radius: 46px;
 overflow: hidden;
@@ -1099,11 +1125,11 @@ color: #ff4800
    font-size: clamp(2.200rem, 0.3vw  + 0.5rem, 2.200rem);
    cursor: pointer;
    background-color: transparent;
-
-   
-   
 }
 #Icompart:hover{
   color: #001bb4
+}
+.my-customProduto img{
+  min-width: 100%;
 }
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
