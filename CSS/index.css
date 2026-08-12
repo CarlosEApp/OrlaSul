@@ -358,6 +358,17 @@ margin-right: 10px;
 #divUser{
 display: none;
 }
+#divPesquisar{
+width: 100%;
+text-align: center;
+border-radius: 10px;
+padding-top: 7px;
+padding-bottom: 7px;
+border-bottom: 0px solid rgba(0, 0, 0, 0.158);
+margin-bottom: 10px;
+background-color: #f3f3ff;
+margin-top: 10px;
+}
 
 #nichos, #BascaR{
 margin: auto;
@@ -831,7 +842,7 @@ gap: 10px;
 margin-top: 10px;
 }
 .btnList{
-width: 40%;
+width: 43%;
 cursor: pointer;
 font-size: clamp(1rem, 0.3vw  + 0.5rem, 1rem);
 background-color: rgb(255, 72, 0);

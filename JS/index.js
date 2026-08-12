@@ -485,6 +485,8 @@ var botao = document.createElement('button');
 botao.textContent = 'Ir para loja';
 botao.className = 'btnList';
 
+
+
 div2.appendChild(img);
 div3.appendChild(p);
 div3.appendChild(h2);
@@ -514,6 +516,7 @@ verificarTela();
 
 
 
+
 botao.addEventListener('click', function() {
    var IDU= sessionStorage.getItem('idUser');
    var hora= sessionStorage.getItem('hora')
@@ -532,7 +535,7 @@ Swal.fire({
 title: `${doc.Empresa}`,
 
 text: ``,
-html: ` <button id='btnLoja' class='btnList'>Ir para loja</button>`,
+html: ` <button id='btnLoja' class='btnList'>Ir para loja</button> <button id='btnCompart' class='btnList'>Compartilhe</button>`,
 imageUrl: doc.URLIMG,
 imageAlt: `${doc.Titulo}`,
 background: '#ffffff',
@@ -547,6 +550,15 @@ popup: 'my-customProduto' // Aplica a classe CSS personalizada
 didOpen: () => {
 document.body.style.paddingRight = '0px';   
 }
+})
+
+document.getElementById('btnCompart').addEventListener('click', function(){
+var pag = `${doc.Link}`
+var url = "https://orlasul.netlify.app/";
+var Titulo = `${doc.Titulo}: ${pag}`;
+var whatsappMessage =`✅  ${Titulo} \n\nPágina na web: ${url}`;
+var whatsappLink = `https://wa.me/?text=${encodeURIComponent(whatsappMessage)}`;
+window.open(whatsappLink, "_blank");
 })
 
  document.getElementById('btnLoja').addEventListener('click', function() {
@@ -778,23 +790,32 @@ img.addEventListener('click', function() {
 Swal.fire({
 title: `${doc.Empresa}`,
 
-text: ``,
-html: ` <button id='btnLoja' class='btnList'>Ir para loja</button>`,
-imageUrl: doc.URLIMG,
-imageAlt: `${doc.Titulo}`,
-background: '#ffffff',
-color: '#252525', // cor do texto });
-showCloseButton: true,   // habilita o "X"
-backdrop: true, // habilita o fundo escuro
-allowOutsideClick: true,
-showConfirmButton: false,
-customClass: {
-popup: 'my-customProduto' // Aplica a classe CSS personalizada
-},
-didOpen: () => {
-document.body.style.paddingRight = '0px';   
-}
-})
+  text: ``,
+  html: ` <button id='btnLoja' class='btnList'>Ir para loja</button> <button id='btnCompart' class='btnList'>Compartilhe</button>`,
+  imageUrl: doc.URLIMG,
+  imageAlt: `${doc.Titulo}`,
+  background: '#ffffff',
+  color: '#252525', // cor do texto });
+  showCloseButton: true,   // habilita o "X"
+  backdrop: true, // habilita o fundo escuro
+  allowOutsideClick: true,
+  showConfirmButton: false,
+  customClass: {
+  popup: 'my-customProduto' // Aplica a classe CSS personalizada
+  },
+  didOpen: () => {
+  document.body.style.paddingRight = '0px';   
+  }
+  })
+
+  document.getElementById('btnCompart').addEventListener('click', function(){
+  var pag = `${doc.Link}`
+  var url = "https://orlasul.netlify.app/";
+  var Titulo = `${doc.Titulo}: ${pag}`;
+  var whatsappMessage =`✅  ${Titulo} \n\nPágina na web: ${url}`;
+  var whatsappLink = `https://wa.me/?text=${encodeURIComponent(whatsappMessage)}`;
+  window.open(whatsappLink, "_blank");
+  })
 
  document.getElementById('btnLoja').addEventListener('click', function() {
    var IDU= sessionStorage.getItem('idUser');
@@ -1050,7 +1071,7 @@ Swal.fire({
 title: `${doc.Empresa}`,
 
 text: ``,
-html: ` <button id='btnLoja' class='btnList'>Ir para loja</button>`,
+html: ` <button id='btnLoja' class='btnList'>Ir para loja</button> <button id='btnCompart' class='btnList'>Compartilhe</button>`,
 imageUrl: doc.URLIMG,
 imageAlt: `${doc.Titulo}`,
 background: '#ffffff',
@@ -1067,6 +1088,14 @@ document.body.style.paddingRight = '0px';
 }
 })
 
+document.getElementById('btnCompart').addEventListener('click', function(){
+var pag = `${doc.Link}`
+var url = "https://orlasul.netlify.app/";
+var Titulo = `${doc.Titulo}: ${pag}`;
+var whatsappMessage =`✅  ${Titulo} \n\nPágina na web: ${url}`;
+var whatsappLink = `https://wa.me/?text=${encodeURIComponent(whatsappMessage)}`;
+window.open(whatsappLink, "_blank");
+})
  document.getElementById('btnLoja').addEventListener('click', function() {
 
    var IDU= sessionStorage.getItem('idUser');
