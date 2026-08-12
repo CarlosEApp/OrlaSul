@@ -1083,10 +1083,12 @@ color: #ff4800
 }
 .btnList{
   margin-bottom: 10px;
+    
 }
 .my-customProduto #btnCompart{
   background-color: transparent;
   margin-left: 20%;
+   
 }
 .my-customProduto #btnCompart:hover{
   background-color: transparent;
@@ -1094,9 +1096,11 @@ color: #ff4800
 }
 #Icompart{
    color: #ff4800;
-   font-size: clamp(1.900rem, 0.3vw  + 0.5rem, 1.900rem);
+   font-size: clamp(2.200rem, 0.3vw  + 0.5rem, 2.200rem);
    cursor: pointer;
    background-color: transparent;
+
+   
    
 }
 #Icompart:hover{
