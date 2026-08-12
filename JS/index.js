@@ -535,7 +535,7 @@ Swal.fire({
 title: `${doc.Empresa}`,
 
 text: ``,
-html: ` <button id='btnLoja' class='btnList'>Ir para loja </button> <button id='btnCompart' > <i id='Icompart' class="fa-solid fa-square-share-nodes"></i></button>`,
+html: ` <button id='btnLoja' class='btnList'>Ir para loja </button> <button id='btnCompart'  title='Compartilhe esse Produto'> <i id='Icompart' class="fa-solid fa-square-share-nodes"></i></button>`,
 imageUrl: doc.URLIMG,
 imageAlt: `${doc.Titulo}`,
 background: '#ffffff',
@@ -791,7 +791,7 @@ Swal.fire({
 title: `${doc.Empresa}`,
 
   text: ``,
-  html:`<button id='btnLoja' class='btnList'>Ir para loja </button> <button id='btnCompart' > <i id='Icompart' class="fa-solid fa-square-share-nodes"></i></button>`,
+  html: ` <button id='btnLoja' class='btnList'>Ir para loja </button> <button id='btnCompart'  title='Compartilhe esse Produto'> <i id='Icompart' class="fa-solid fa-square-share-nodes"></i></button>`,
   imageUrl: doc.URLIMG,
   imageAlt: `${doc.Titulo}`,
   background: '#ffffff',
@@ -1071,7 +1071,7 @@ Swal.fire({
 title: `${doc.Empresa}`,
 
 text: ``,
-html: ` <button id='btnLoja' class='btnList'>Ir para loja </button> <button id='btnCompart' > <i id='Icompart' class="fa-solid fa-square-share-nodes"></i></button>`,
+html: ` <button id='btnLoja' class='btnList'>Ir para loja </button> <button id='btnCompart'  title='Compartilhe esse Produto'> <i id='Icompart' class="fa-solid fa-square-share-nodes"></i></button>`,
 imageUrl: doc.URLIMG,
 imageAlt: `${doc.Titulo}`,
 background: '#ffffff',
