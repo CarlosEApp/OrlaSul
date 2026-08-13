@@ -28,20 +28,19 @@ cursor: pointer;
 }
 body{
 font-family: 'Poppins', sans-serif;
-background-color: rgb(255, 255, 255);
+background-color: rgb(252, 251, 255);
 margin: 0%;
 padding: 0%;
 }
-
 #divGeral{
 margin: auto;
 width: 100%;
-max-width: 1900px;
+max-width: 1920px;
 }
 header{
 margin: auto;
 width: 100%;
-max-width: 1900px;
+max-width: 1920px;
 background-color: rgba(255, 255, 255, 0.76);
 padding-bottom: 0px;
 position: fixed;
@@ -95,6 +94,7 @@ cursor: pointer;
 #logo img{
 width:140px;
 }
+
 #bHome{
 font-family: 'Poppins', sans-serif;
 margin-left: 5px;
@@ -140,7 +140,6 @@ margin: auto;
 width: 100%;
 max-width: 1920px;
 }
-
 #main_Um{
  position: relative;
 padding-top: 160px;
@@ -151,6 +150,7 @@ min-height: 50vh;
 background-color: rgba(247, 247, 247, 0);
 color: rgb(32, 32, 32);
 font-family: 'Poppins', sans-serif;
+z-index: 0;
 }
 #main_Um::before {
   content: "";
@@ -159,10 +159,12 @@ font-family: 'Poppins', sans-serif;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.822); /* camada translúcida */
-  z-index:-2;
+  background-color: #ffffff7e; /* camada translúcida */
+  z-index:-1;
 }
-
+#main_Um::before {
+  transition: background-color 0.3s ease;
+}
 #divheader_dois{
 margin: auto;
 width: 100%;
