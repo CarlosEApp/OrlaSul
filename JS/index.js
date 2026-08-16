@@ -978,8 +978,8 @@ function listaMaisProcurados(){
 var itens_ = 0
 var respItens= sessionStorage.getItem('Itens+_')
 if(!respItens||respItens==''){
- var respItens=12
-  sessionStorage.setItem('Itens+_', 12)
+ var respItens=25
+  //sessionStorage.setItem('Itens+_', 36)
 }else{
  var respItens=sessionStorage.getItem('Itens+_')
 }
