@@ -1126,4 +1126,8 @@ document.getElementById('inputPesquisar').scrollIntoView({behavior: 'smooth'});
 
 
 
-//manipulação por cor
+
+//privacidade
+document.getElementById('PPrivate').addEventListener('click', function(){
+  window.open('https://orlasul.netlify.app/HTML/privacidade.html','_blank')
+})
