@@ -1,4 +1,171 @@
 
+sessionStorage.setItem('Codigo_IDD', '');
+window.onload = function () {
+var params = new URLSearchParams(window.location.search);
+var codigo = params.get("codigo");
+
+if (codigo) {
+//wal("Código capturado: " + codigo);
+sessionStorage.setItem('Codigo_IDD', codigo);
+//alert(codigo)
+ setTimeout(function(){
+liInicial()
+ },7000)
+} else {
+console.log("Nenhum código encontrado na URL.");
+sessionStorage.setItem('Codigo_IDD', '');
+//wal("Código capturado: " + codigo);
+}
+};
+
+function liInicial(){
+
+ var código=sessionStorage.getItem('Codigo_IDD');
+var list= document.getElementById('list');
+list.innerHTML=''
+var coll= sessionStorage.getItem('Coll')
+var db=firebase.firestore();
+var produtosRef = db.collection(`${coll}`);
+produtosRef.get().then((querySnapshot) => {
+querySnapshot.forEach(doc => {
+var doc = doc.data();
+var itemss= querySnapshot.size;
+
+if(código==doc.ID){
+cancelar() 
+var div = document.createElement('div');
+var div2 = document.createElement('div');
+var div3 = document.createElement('div');
+var div4 = document.createElement('div');
+div.className = 'divList';
+div2.className = 'divList2';
+div3.className = 'divList3';
+div4.className = 'divList4';
+
+var img = document.createElement('img');
+img.src = doc.URLIMG;
+img.alt = doc.Titulo;
+img.className = 'imgList';
+
+var p= document.createElement('p');
+p.textContent = doc.Empresa;
+p.className = 'pEmpresa';
+
+var h2 = document.createElement('h3');
+h2.textContent = doc.Titulo;
+h2.className = 'h2Titulo';
+
+var p2 = document.createElement('p');
+p2.textContent = doc.SubTitulo;
+p2.className = 'pSubtitulo';
+
+var vl=doc.Valor.split(',');
+var v1=vl[0]
+var v2=vl[1]
+
+var h3 = document.createElement('p');
+
+h3.innerHTML = `R$ <b id='bv'>${v1}</b><b id='bvc'>${v2}</b>`;
+h3.className = 'h3Valor';
+
+var botao = document.createElement('button');
+botao.textContent = 'Ir para loja';
+botao.className = 'btnList';
+
+div2.appendChild(img);
+div3.appendChild(p);
+div3.appendChild(h2);
+div3.appendChild(p2);
+div4.appendChild(h3);
+div4.appendChild(botao);
+
+div.appendChild(div2);
+div.appendChild(div3);
+div.appendChild(div4);
+
+list.appendChild(div);
+
+function verificarTela() {
+  if (window.innerWidth < 1100) {
+    //document.getElementById('a_pesquisaMobile').click();
+     document.getElementById('divLista').scrollIntoView({behavior: 'smooth'});
+
+  } else {
+    //document.getElementById('a_pesquisa').click();
+     document.getElementById('main_Um').scrollIntoView({behavior: 'smooth'});
+  }
+}
+// Executa ao carregar
+verificarTela();
+
+botao.addEventListener('click', function() {
+   var IDU= sessionStorage.getItem('idUser');
+   var hora= sessionStorage.getItem('hora')
+   var data= sessionStorage.getItem('data')
+  var dbfid=firebase.firestore();
+   dbfid.collection('Clicks_BTNLojas').doc(`${IDU}_${hora}`).set({
+    ID:IDU,
+    Produto:doc.Titulo,
+     Codigo:doc.ID,
+    DATA:`${data}-${hora}`,
+  })
+window.open(`${doc.Link}`, '_blank');
+})
+img.addEventListener('click', function() {
+Swal.fire({
+title: `${doc.Empresa}`,
+
+text: ``,
+html: ` <button id='btnLoja' class='btnList'>Ir para loja </button> <button id='btnCompart'  title='Compartilhe esse Produto'> <i id='Icompart' class="fa-solid fa-square-share-nodes"></i></button>`,
+imageUrl: doc.URLIMG,
+imageAlt: `${doc.Titulo}`,
+background: '#ffffff',
+color: '#252525', // cor do texto });
+showCloseButton: true,   // habilita o "X"
+backdrop: true, // habilita o fundo escuro
+allowOutsideClick: true,
+showConfirmButton: false,
+customClass: {
+popup: 'my-customProduto' // Aplica a classe CSS personalizada
+},
+didOpen: () => {
+document.body.style.paddingRight = '0px';   
+}
+})
+
+document.getElementById('btnCompart').addEventListener('click', function(){
+var pag = `${doc.Link}`
+var url = "https://orlasul.netlify.app/";
+var Titulo = `${doc.Titulo}: ${pag}`;
+var whatsappMessage =`✅  ${Titulo} \n\nPágina na web: ${url}`;
+var whatsappLink = `https://wa.me/?text=${encodeURIComponent(whatsappMessage)}`;
+window.open(whatsappLink, "_blank");
+})
+
+ document.getElementById('btnLoja').addEventListener('click', function() {
+
+   var IDU= sessionStorage.getItem('idUser');
+   var hora= sessionStorage.getItem('hora')
+   var data= sessionStorage.getItem('data')
+
+   var dbfid=firebase.firestore();
+   dbfid.collection('Clicks_BTNLojas').doc(`${IDU}_${hora}`).set({
+    ID:IDU,
+    Produto:doc.Titulo,
+     Codigo:doc.ID,
+    DATA:`${data}-${hora}`,
+  })
+
+  window.open(`${doc.Link}`, '_blank');
+ })
+})
+//swal(`${doc.Empresa}`,`${doc.Titulo} \n\n Promoção ${doc.Valor}`, doc.URLIMG)
+//alert(itens)
+}
+})
+ })
+}
+
 
 
 // Tela Cheia
@@ -314,6 +481,13 @@ sessionStorage.setItem('SeçãoAberta','Iniciado')
 document.getElementById('topo').click();
  //document.getElementById('togle').click();
       document.getElementById('div_lista_').style.display='block';
+       var código=sessionStorage.getItem('Codigo_IDD');
+       if(!código||código==''){
+
+       }else{
+        liInicial()
+       }
+
  iduser()
 swalclose()
 clearInterval(id)
