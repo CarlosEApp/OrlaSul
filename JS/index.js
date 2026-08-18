@@ -8,9 +8,6 @@ if (codigo) {
 //wal("Código capturado: " + codigo);
 sessionStorage.setItem('Codigo_IDD', codigo);
 //alert(codigo)
- setTimeout(function(){
-liInicial()
- },7000)
 } else {
 console.log("Nenhum código encontrado na URL.");
 sessionStorage.setItem('Codigo_IDD', '');
