@@ -1,0 +1,269 @@
+ 
+
+ *{
+margin: 0%;
+padding: 0%;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+::-webkit-scrollbar {
+width: 5px;
+margin-left: 5px;
+margin-top: 5px;
+/* Largura da barra de rolagem */
+cursor: pointer;
+}
+::-webkit-scrollbar-thumb {
+margin-left: 3px;
+background-color: rgba(0, 62, 100, 0);
+/* Cor do polegar da barra de rolagem */
+margin-top: 5px;
+border-radius: 5px;
+cursor: pointer;
+}
+:-webkit-scrollbar-track {
+/* Cor da trilha da barra de rolagem */
+margin-top: 5px;
+border-radius: 7 rgb(177, 175, 175);
+background-color: rgba(38, 39, 39, 0);
+border-radius: 5px;
+cursor: pointer;
+}
+body{
+font-family: 'Poppins', sans-serif;
+background-color: rgb(10, 0, 9);
+margin: 0%;
+padding: 0%;
+}
+#divGeral{
+margin: auto;
+width: 100%;
+max-width: 1920px;
+;
+}
+header{
+margin: auto;
+width: 100%;
+max-width: 1920px;
+background-color: rgb(10, 10, 10);
+padding-bottom: 10px;
+position: fixed;
+z-index: 99;
+min-height: 10vh;
+}
+#header_um{
+margin: auto;
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: rgb(10, 10, 10);
+}
+#I_Casa, #menu{
+font-size: clamp(1.200rem, 0.3vw  + 0.5rem, 1.100rem);
+cursor: pointer;
+color: aliceblue;
+}
+#I_Casa:hover,#menu:hover{
+color: rgb(253, 72, 0);
+}
+#menu{
+margin-right: 10px;
+}
+#header_um h1{
+margin-left: 10px;
+color: aliceblue;
+}
+#bHome{
+font-family: 'Poppins', sans-serif;
+margin-left: 5px;
+font-size: clamp(0.900rem, 0.3vw  + 0.5rem, 0.900rem);
+}
+#header_dois select{
+margin-top: 20px;
+background-color: black;
+color: aliceblue;
+cursor: pointer;
+margin-left: 20px;
+max-width: 300px;
+padding: 10px;
+border-radius: 5px;
+font-size: clamp(1rem, 0.3vw  + 0.5rem, 1rem);
+}
+#Empresa, #nichos, #Empresa_, #nichos_,#SubLista{
+background-color: black;
+color: aliceblue;
+cursor: pointer;
+max-width: 300px;
+padding: 10px;
+border-radius: 5px;
+font-size: clamp(1rem, 0.3vw  + 0.5rem, 1rem);
+}
+#Empresa_, #nichos_{
+    margin-top: 10px;
+    margin-bottom: 40px;
+    margin-left: 7px;
+}
+main{
+margin: auto;
+width: 100%;
+padding-top: 130px;
+max-width: 1200px;
+}
+#divCadastro{
+margin: auto;
+width: 97%;
+max-width: 500px;
+color: aliceblue;
+min-height: 50vh;
+padding-bottom: 50px;
+padding-top: 10px;
+margin-bottom: 70px;
+background-color: rgba(137, 43, 226, 0);
+display: none;
+}
+#cad{
+margin: auto;
+width: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+gap: 10px;
+}
+#divCadastro h1{
+color: aliceblue;
+margin-top: 20px;
+margin-bottom: 10px;
+}
+#divCadastro input{
+width: 90%;
+padding: 12px;
+background-color: rgb(244, 246, 255);
+cursor: pointer;
+border-radius: 5px;
+font-size: clamp(1rem, 0.3vw  + 0.5rem, 1rem);
+outline: none;
+border: 0cap;
+font-family: 'Poppins', sans-serif;
+}
+#divCadastro input:hover{
+background-color: rgb(1, 225, 255);
+}
+#divCadastro #Código{
+width: 200px;
+padding: 16px;
+font-size: clamp(1.300rem, 0.3vw  + 0.5rem, 1.300rem);
+text-shadow: 1px 1px 2px rgb(0, 0, 0);
+color: black;
+}
+#salvar{
+margin: auto;
+width: 94%;
+padding: 16px;
+font-size: clamp(1.100rem, 0.3vw  + 0.5rem, 1.100rem);
+cursor: pointer;
+text-shadow: 1px 1px 1px rgb(22, 22, 22);
+background-color: black;
+color: aliceblue;
+border-radius: 5px;
+font-family: 'Poppins', sans-serif;
+}
+#salvar:hover {
+background-color: rgb(255, 255, 255);
+border-color: rgb(211, 211, 211);
+color: rgb(14, 14, 14);
+}
+#sairCad{
+cursor: pointer;
+font-size: clamp(1.100rem, 0.3vw  + 0.5rem, 1.100rem);
+}
+#Cad_img{
+float: right;
+width: 120px;
+margin-right: 20px;
+max-height: 120px;
+cursor: pointer;
+}
+#fileInput{
+display: none;
+}
+#divProdCadastrados{
+margin: auto;
+width: 100%;
+max-width: 1200px;
+min-height: 70vh;
+background-color: aliceblue;
+font-family: 'Poppins', sans-serif;
+display: none;
+}
+#divProdCadastrados h1{
+margin-top: 10px;
+background-color: rgb(255, 81, 0);
+margin-bottom: 20px;
+text-align: center;
+color: aliceblue;
+padding: 10px;
+}
+#sairProdCad{
+float: right;
+margin-right: 20px;
+cursor: pointer;
+font-family: 'Poppins', sans-serif;
+font-size: clamp(1rem, 0.3vw  + 0.5rem, 1rem);
+color: rgb(36, 36, 36);
+font-weight: bold;
+}
+.ContG{
+margin:auto ;
+width: 90%;
+max-width: 250px;
+overflow: hidden;
+display: flex;
+flex-direction: column;
+gap: 10px;
+padding-bottom: 50px;
+margin-bottom: 50px;
+}
+.imagem1{
+width: 100%;
+}
+.label1{
+font-size: clamp(1.400rem, 0.3vw  + 0.5rem, 1.400rem);
+font-weight: bold;
+font-family: 'Poppins', sans-serif;
+}
+.label3, .label4{
+font-size: clamp(1rem, 0.3vw  + 0.5rem, 1rem);
+color: rebeccapurple;
+font-family: 'Poppins', sans-serif;
+
+}
+.div3{
+display: flex;
+justify-content: space-around;
+align-items: center;
+}
+.div3 #botão, .div3 #botão2,.div3 #botão3{
+cursor: pointer;
+font-size: clamp(1.100rem, 0.3vw  + 0.5rem, 1.100rem);
+}
+#list{
+margin: auto;
+width: 100%;
+display: flex;
+justify-content: space-around;
+align-items: center;
+flex-wrap: wrap;
+gap: 20px;
+}
+.div3 #botão:hover, .div3 #botão2:hover, .div3 #botão3:hover{
+color: rgb(255, 51, 0);
+}
+footer{
+width: 100%;
+background-color: rgba(255, 255, 255, 0);
+min-height: 73vh;
+margin-top: 30px;
+background-image: url('../SRC/Logo_OrlaSul.png');
+background-repeat: no-repeat;
+background-position: center;
+}
